@@ -34,7 +34,7 @@ group type2 type 2
 
 # 4) Visualization
 thermo 1000
-dump mydmp all atom 1000 dump.run.lammpstrj
+dump mydmp all atom 50 dump.run.lammpstrj
 
 variable Ntype1in equal count(mytype1,mycylin)
 variable Ntype1ou equal count(mytype1,mycylou)
@@ -51,5 +51,5 @@ velocity all create 1.0 4928459 mom yes rot yes dist gaussian
 fix mynve all nve
 fix mylgv all langevin 1.0 1.0 0.1 1530917 zero yes
 timestep 0.005
-run 300000
+run 80000
 write_data mixed.data
