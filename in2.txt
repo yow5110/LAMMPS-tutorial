@@ -8,8 +8,8 @@ boundary p p p
 #  System definition
 region simulation_box block -15e-10 15e-10  -15e-10 15e-10  -15e-10 15e-10 
 create_box 2 simulation_box
-region mycylin cylinder z 0 0 10 INF INF side in
-region mycylou cylinder z 0 0 10 INF INF side out
+region mycylin cylinder z 0 0 6e-10 INF INF side in
+region mycylou cylinder z 0 0 6e-10 INF INF side out
 create_atoms 1 random 1000 341341 mycylou
 create_atoms 2 random 150 127569 mycylin
 
