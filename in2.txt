@@ -1,12 +1,12 @@
 # Initialization
-units lj
+units si
 dimension 3
 atom_style atomic
-pair_style lj/cut 2.5
+pair_style lj/cut 2.5e-10
 boundary p p p
 
 #  System definition
-region simulation_box block -20 20 -20 20 -20 20
+region simulation_box block -15e-10 15e-10  -15e-10 15e-10  -15e-10 15e-10 
 create_box 2 simulation_box
 region mycylin cylinder z 0 0 10 INF INF side in
 region mycylou cylinder z 0 0 10 INF INF side out
@@ -16,8 +16,8 @@ create_atoms 2 random 150 127569 mycylin
 # Simulation settings
 mass 1 1
 mass 2 1
-pair_coeff 1 1 1.0 1.0
-pair_coeff 2 2 0.5 3.0
+pair_coeff 1 1 1.8e-21 1.3e-10
+pair_coeff 2 2 0.9e-21 2.6e-10
 neigh_modify every 1 delay 5 check yes
 
 #  Visualization
